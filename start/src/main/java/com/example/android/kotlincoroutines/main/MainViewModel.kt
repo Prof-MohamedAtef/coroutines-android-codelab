@@ -129,10 +129,10 @@ class MainViewModel(private val repository: TitleRepository) : ViewModel() {
             try {
                 _spinner.value = true
                 repository.refreshTitle()
-            }catch (error: TitleRefreshError){
-                _snackBar.value=error.message
-            }finally {
-                _spinner.value=false
+            } catch (error: TitleRefreshError) {
+                _snackBar.value = error.message
+            } finally {
+                _spinner.value = false
             }
         }
     }
